@@ -1,0 +1,13 @@
+universe = vanilla
+log = log/mcpi.log.$(Cluster).$(Process)
+error = log/mcpi.err.$(Cluster).$(Process)
+output = log/mcpi.out.$(Cluster).$(Process)
+
+# Setup R path, run the mcpi.R script
+executable = R-wrapper.sh
+transfer_input_files = mcpi.R
+arguments = mcpi.R
+
+requirements = (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
++ProjectName="ConnectTrain"
+queue 100
