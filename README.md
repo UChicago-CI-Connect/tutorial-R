@@ -15,7 +15,7 @@ This method converges extremely slowly, which makes it great for a CPU-intensive
 
 Accessing R on the submit host
 ------------------------------
-First we'll need to create a working directory, you can either run tutorial R or type the following:
+First we'll need to create a working directory, you can either run {{$ tutorial R}} or type the following:
 ````
 [user@login01 ~]$ mkdir osg-R; cd osg-R
 ````
