@@ -20,17 +20,17 @@ First we'll need to create a working directory, you can either run {{$ tutorial 
 [user@login01 ~]$ mkdir osg-R; cd osg-R
 ````
 
-Since R is installed into OASIS, it's not available in the normal system paths. We'll need to set up those paths so we can access R correctly. To do that we'll use PALMS:
+First, we'll need to set up the system paths so we can access R correctly. This is done via OSG's [Distributed Environment Modules](https://confluence.grid.iu.edu/display/CON/Distributed+Environment+Modules). To access these modules and access R, enter:
 ````
-[user@login01 osg-R]$ source /cvmfs/oasis.opensciencegrid.org/osg/palms/setup
-[user@login01 osg-R]$ palmsdosetup R
+[user@login01 osg-R]$ source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/5.6.2/init/bash
+[user@login01 osg-R]$ module load R
 ````
 
 Once we have the path set up, we can try to run R. Don't worry if you aren't an R expert, I'm not either.
 ````
 [user@login01 osg-R]$ R
  
-R version 3.0.1 (2013-05-16) -- "Good Sport"
+R version 3.1.1 (2014-07-10) -- "Sock it to Me"
 Copyright (C) 2013 The R Foundation for Statistical Computing
 Platform: x86_64-unknown-linux-gnu (64-bit)
 R is free software and comes with ABSOLUTELY NO WARRANTY.
