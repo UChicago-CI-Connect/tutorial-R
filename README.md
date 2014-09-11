@@ -118,7 +118,6 @@ transfer_input_files = mcpi.R
 arguments = mcpi.R
  
 requirements = (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
-+ProjectName="ConnectTrain"
 queue 100 
 ````
 

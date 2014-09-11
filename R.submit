@@ -9,5 +9,5 @@ transfer_input_files = mcpi.R
 arguments = mcpi.R
 
 requirements = (HAS_CVMFS =?= TRUE)
-+ProjectName="ConnectTrain"
+# +ProjectName="ConnectTrain"
 queue 100
