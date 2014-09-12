@@ -15,7 +15,7 @@ This method converges extremely slowly, which makes it great for a CPU-intensive
 
 Accessing R on the submit host
 ------------------------------
-First we'll need to create a working directory, you can either run {{$ tutorial R}} or type the following:
+First we'll need to create a working directory, you can either run *$ tutorial R* or type the following:
 ````
 [user@login01 ~]$ mkdir osg-R; cd osg-R
 ````
@@ -164,4 +164,4 @@ What to do next?
 ----------------
 The R.submit file may have included a few lines that you are unfamiliar with.  For example, $(Cluster) and $(Process) are variables that will be replaced with the job's cluster and process id.  This is useful when you have many jobs submitted in the same file.  Each output and error file will be in a separate directory.
 
-Also, did you notice the transfer_input_files line?  This tells HTCondor what files to transfer with the job to the worker node.  You don't have to tell it to transfer the executable, HTCondor is smart enough to know that the job will need that.  But any extra files, such as our MonteCarlo R file, will need to be explicitly listed to be transferred with the job.  You can use transfer_input_files for input data to the job, as shown in Transferring data with HTCondor.
+Also, did you notice the transfer_input_files line?  This tells HTCondor what files to transfer with the job to the worker node.  You don't have to tell it to transfer the executable, HTCondor is smart enough to know that the job will need that.  But any extra files, such as our MonteCarlo R file, will need to be explicitly listed to be transferred with the job.  You can use transfer_input_files for input data to the job, as shown in [Transferring data with HTCondor](https://github.com/OSGConnect/tutorial-htcondor_transfer).
