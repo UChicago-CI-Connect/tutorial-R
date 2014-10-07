@@ -1,4 +1,3 @@
-
 montecarloPi <- function(trials) {
   count = 0
   for(i in 1:trials) {
@@ -9,4 +8,4 @@ montecarloPi <- function(trials) {
   return((count*4)/trials)
 }
  
-montecarloPi(1000000)
+montecarloPi(1000)

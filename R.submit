@@ -1,13 +1,21 @@
-universe = vanilla
-log = log/mcpi.log.$(Cluster).$(Process)
-error = log/mcpi.err.$(Cluster).$(Process)
-output = log/mcpi.out.$(Cluster).$(Process)
 
-# Setup R path, run the mcpi.R script
-executable = R-wrapper.sh
-transfer_input_files = mcpi.R
-arguments = mcpi.R
+Universe = grid
+grid_resource = batch condor dbala@login.ci-connect.uchicago.edu
+#grid_resource = batch condor dbala@login.osgconnect.net
+#
+#
+#
+Executable = R-wrapper.sh
+transfer_input_files = mcpi.R 
+should_transfer_files=Yes
+when_to_transfer_output = ON_EXIT
+output        = job.out.$(Process)
+error         = job.error.$(Process)
+log           = job.log.$(Process)
+when_to_transfer_output = ON_EXIT
+requirements = (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
++ProjectName="uchicago"
+Queue 1
 
-requirements = (HAS_CVMFS =?= TRUE)
-# +ProjectName="ConnectTrain"
-queue 100
+
+
