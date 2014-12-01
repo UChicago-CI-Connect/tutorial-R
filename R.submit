@@ -1,11 +1,21 @@
-universe = vanilla
- 
-output = job.out.$(Process)
-error = job.error.$(Process)
-log = job.log.$(Process)
 
+Universe = grid
+grid_resource = batch condor dbala@login.ci-connect.uchicago.edu
+#grid_resource = batch condor dbala@login.osgconnect.net
+#
+#
+#
 Executable = R-wrapper.sh
-arguments = mcpi.R
 transfer_input_files = mcpi.R 
+should_transfer_files=Yes
+when_to_transfer_output = ON_EXIT
+output        = job.out.$(Process)
+error         = job.error.$(Process)
+log           = job.log.$(Process)
+when_to_transfer_output = ON_EXIT
+requirements = (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
++ProjectName="ConnectTrain"
+Queue 1
 
-queue
+
+
